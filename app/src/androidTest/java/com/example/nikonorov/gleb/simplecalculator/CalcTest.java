@@ -62,7 +62,7 @@ public class CalcTest {
         onView(withId(R.id.fourButton)).perform(click());
         onView(withId(R.id.equalsButton)).perform(click());
 
-        //Result is 16
+        //Result is 2
         onView(withId(R.id.outputLabel)).check(matches(withText("2")));
     }
 
@@ -74,7 +74,7 @@ public class CalcTest {
         onView(withId(R.id.fourButton)).perform(click());
         onView(withId(R.id.equalsButton)).perform(click());
 
-        //Result is 16
+        //Result is 4
         onView(withId(R.id.outputLabel)).check(matches(withText("4")));
     }
 
