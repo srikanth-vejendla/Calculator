@@ -1,0 +1,267 @@
+<!--Need linearlayout to use "layout weight attribute
+    determine if verticle or horizontal by android:orientation attribute-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    tools:context=".MainActivity"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2"
+        android:textColor="@color/NumberButtonColor"
+        android:textSize="60dp"
+        android:gravity="center_vertical"
+        android:background="@color/TextFieldBackgroundColor"
+        android:id="@+id/outputLabel"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.8"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:id="@+id/buttonContainerLayout"
+        android:columnCount="4"
+        android:backgroundTint="@color/NumberButtonColor"
+        android:rowCount="5">
+
+        <Button
+            android:text="C"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:id="@+id/clearButton"
+            android:onClick="processButtonClick"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Button
+            android:text="+/-"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/plusMinButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <Button
+            android:text="%"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/percentButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="0"
+            android:layout_column="2" />
+
+        <Button
+            android:text="DIV"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/divideButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="0"
+            android:layout_column="3" />
+
+        <Button
+            android:text="7"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/sevenButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <Button
+            android:text="8"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/eightButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <Button
+            android:text="9"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/nineButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <Button
+            android:text="MUL"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/multiplyButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="1"
+            android:layout_column="3" />
+
+        <Button
+            android:text="4"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/fourButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <Button
+            android:text="5"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/fiveButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_columnWeight="0.25"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <Button
+            android:text="6"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/sixButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="2"
+            android:layout_column="2" />
+
+        <Button
+            android:text="SUB"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/subtractButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="2"
+            android:layout_column="3" />
+
+        <Button
+            android:text="1"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/oneButton"
+            android:layout_columnWeight="0.25"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_rowWeight="0.16"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <Button
+            android:text="2"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/twoButton"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_row="3"
+            android:layout_column="1" />
+
+        <Button
+            android:text="3"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/threeButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="3"
+            android:layout_column="2" />
+
+        <Button
+            android:text="ADD"
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/adButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="3"
+            android:layout_column="3" />
+
+        <Button
+            android:text="0"
+            android:backgroundTint="@color/NumberButtonColor"
+            android:layout_columnSpan="2"
+            android:onClick="processButtonClick"
+            android:id="@+id/zeroButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="4"
+            android:layout_column="0" />
+
+        <Button
+            android:text="."
+            android:backgroundTint="@color/NumberButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/dotButtton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="4"
+            android:layout_column="2" />
+
+        <Button
+            android:text="="
+            android:backgroundTint="@color/OperationButtonColor"
+            android:onClick="processButtonClick"
+            android:id="@+id/equalsButton"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="0.25"
+            android:layout_rowWeight="0.16"
+            android:layout_row="4"
+            android:layout_column="3" />
+    </GridLayout>
+</LinearLayout>
