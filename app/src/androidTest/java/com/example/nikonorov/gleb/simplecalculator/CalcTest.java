@@ -66,4 +66,16 @@ public class CalcTest {
         onView(withId(R.id.outputLabel)).check(matches(withText("2")));
     }
 
+    @Test
+    public void subTwoNumbers(){
+        //4*4 =16
+        onView(withId(R.id.eightButton)).perform(click());
+        onView(withId(R.id.subtractButton)).perform(click());
+        onView(withId(R.id.fourButton)).perform(click());
+        onView(withId(R.id.equalsButton)).perform(click());
+
+        //Result is 16
+        onView(withId(R.id.outputLabel)).check(matches(withText("4")));
+    }
+
 }
