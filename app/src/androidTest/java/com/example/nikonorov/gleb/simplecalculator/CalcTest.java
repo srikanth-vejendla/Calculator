@@ -57,7 +57,7 @@ public class CalcTest {
 
     @Test
     public void divTwoNumbers(){
-        //4*4 =16
+        //8/4 = 2
         onView(withId(R.id.eightButton)).perform(click());
         onView(withId(R.id.divideButton)).perform(click());
         onView(withId(R.id.fourButton)).perform(click());
@@ -69,7 +69,7 @@ public class CalcTest {
 
     @Test
     public void subTwoNumbers(){
-        //4*4 =16
+        //8-4=4
         onView(withId(R.id.eightButton)).perform(click());
         onView(withId(R.id.subtractButton)).perform(click());
         onView(withId(R.id.fourButton)).perform(click());
